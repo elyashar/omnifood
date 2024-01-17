@@ -12,9 +12,23 @@ console.log(h1);
 // h1.style.padding = "5rem"
 // })
 
+///////////////////////////////////////////////////////////
+// Set current year
 const yearEL = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEL.textContent = currentYear;
+
+///////////////////////////////////////////////////////////
+// Make nobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function(){
+  headerEl.classList.toggle("nav-open");
+});
+
+
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
